@@ -18,7 +18,7 @@ public class Address {
     public Address() {
     }
 
-    public Address(int addressId, int streetNumber, String streetName, String city, String postalCode, String country) {
+    public Address(Integer addressId, Integer streetNumber, String streetName, String city, String postalCode, String country) {
         this.addressId = addressId;
         this.streetNumber = streetNumber;
         this.streetName = streetName;
@@ -27,7 +27,7 @@ public class Address {
         this.country = country;
     }
 
-    public Address(int streetNumber, String streetName, String city, String postalCode, String country) {
+    public Address(Integer streetNumber, String streetName, String city, String postalCode, String country) {
         this.streetNumber = streetNumber;
         this.streetName = streetName;
         this.city = city;
@@ -48,7 +48,7 @@ public class Address {
         return addressId;
     }
 
-    public void setAddressId(int addressId) {
+    public void setAddressId(Integer addressId) {
         this.addressId = addressId;
     }
 
@@ -56,7 +56,7 @@ public class Address {
         return streetNumber;
     }
 
-    public void setStreetNumber(int streetNumber) {
+    public void setStreetNumber(Integer streetNumber) {
         this.streetNumber = streetNumber;
     }
 

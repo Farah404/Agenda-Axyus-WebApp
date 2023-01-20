@@ -83,7 +83,7 @@ public class AgendaManager {
     }
 
     //Create Address
-    public int createAddress(Address address) throws SQLException {
+    public Integer createAddress(Address address) throws SQLException {
         try (Connection connection = PoolManager.getInstance().getConnection()) {
             final StringBuilder sql = new StringBuilder();
             final PStmtBinder.SimplePStmtBinderBuilder binder = new PStmtBinder.SimplePStmtBinderBuilder();

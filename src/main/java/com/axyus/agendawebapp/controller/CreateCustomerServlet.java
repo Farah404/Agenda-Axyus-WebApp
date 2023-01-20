@@ -51,6 +51,7 @@ public class CreateCustomerServlet extends HttpServlet {
         String postalCode = request.getParameter("postalCode");
         String country = request.getParameter("country");
         Address address = new Address(streetNumber, streetName, city, postalCode, country);
+        address.setAddressId(0);
         agendaManager.createAddress(address);
         request.setAttribute("address", address);
         //new customer

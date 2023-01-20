@@ -45,12 +45,13 @@ public class CreateAddressServlet extends HttpServlet {
     
      private void createAddress(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         utils.initialize();
-        int streetNumber = Integer.parseInt(request.getParameter("streetNumber"));
+        Integer streetNumber = Integer.parseInt(request.getParameter("streetNumber"));
         String streetName = request.getParameter("streetName");
         String city = request.getParameter("city");
         String postalCode = request.getParameter("postalCode");
         String country = request.getParameter("country");
         Address address = new Address(streetNumber, streetName, city, postalCode, country);
+        address.setAddressId(0);
         agendaManager.createAddress(address);
         request.setAttribute("address", address);
          response.sendRedirect("all-addresses");
